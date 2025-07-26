@@ -17,7 +17,11 @@ export const useMovies = () => {
     const nowPlayingMovies = await UseCases.moviesNowPlayingUseCase(
       movieDBFetcher,
     );
+    console.log(nowPlayingMovies[0]);
   };
 
-  return {};
+  return {
+    isLoading,
+    nowPlaying,
+  };
 };
