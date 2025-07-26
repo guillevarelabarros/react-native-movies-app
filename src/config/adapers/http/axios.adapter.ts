@@ -1,3 +1,5 @@
+// axios.adapter.ts
+
 import axios, { AxiosInstance } from 'axios';
 import { HttpAdapter } from './http.adapter';
 
