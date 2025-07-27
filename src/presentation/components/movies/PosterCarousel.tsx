@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { Movie } from '../../../core/entities/movie.entity';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
+import { MoviePoster } from './MoviePoster';
 
 interface Props {
   movies: Movie[];
@@ -14,7 +15,7 @@ export const PosterCarousel = ({ height = 440, movies }: Props) => {
     <View style={{ height }}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {movies.map(movie => (
-          <Text key={movie.id}>{movie.title}</Text>
+          <MoviePoster key={movie.id} movie={movie} />
         ))}
       </ScrollView>
     </View>

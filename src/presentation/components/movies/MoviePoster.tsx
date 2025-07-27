@@ -1,7 +1,7 @@
 // MoviePoster.tsx
 
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, Pressable } from 'react-native';
 import { Movie } from '../../../core/entities/movie.entity';
 
 interface Props {
@@ -10,9 +10,11 @@ interface Props {
 
 export const MoviePoster = ({ movie }: Props) => {
   return (
-    <View style={{ ...styles.imageContainer, widh: 300, height: 400 }}>
-      <Image style={styles.image} source={{ uri: movie.poster }} />
-    </View>
+    <Pressable>
+      <View style={{ ...styles.imageContainer, width: 300, height: 400 }}>
+        <Image style={styles.image} source={{ uri: movie.poster }} />
+      </View>
+    </Pressable>
   );
 };
 
